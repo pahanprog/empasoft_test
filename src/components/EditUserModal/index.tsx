@@ -61,7 +61,7 @@ const EditUserModal = ({ user, onEditSuccess, handleClose }: Props) => {
       <form onSubmit={formik.handleSubmit}>
         <TextInput
           id="username"
-          label="Username"
+          label="Username*"
           placeholder="Username"
           value={formik.values.username}
           onChange={formik.handleChange}

@@ -51,7 +51,7 @@ const Register = () => {
         <form onSubmit={formik.handleSubmit}>
           <TextInput
             id="username"
-            label="Username"
+            label="Username*"
             placeholder="Username"
             value={formik.values.username}
             onChange={formik.handleChange}
@@ -82,7 +82,7 @@ const Register = () => {
           />
           <TextInput
             id="password"
-            label="Password"
+            label="Password*"
             placeholder="Password"
             value={formik.values.password}
             onChange={formik.handleChange}
@@ -92,7 +92,7 @@ const Register = () => {
           />
           <TextInput
             id="password_confirm"
-            label="Confirm password"
+            label="Confirm password*"
             placeholder="Confirm password"
             value={formik.values.password_confirm}
             onChange={formik.handleChange}
