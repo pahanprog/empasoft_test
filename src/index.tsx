@@ -1,19 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import ContextProvider from "./context/ContextProvider";
+import axios from "axios";
+
+// axios default settings
+axios.defaults.baseURL =
+  "http://emphasoft-test-assignment.herokuapp.com/api/v1/users/";
+axios.defaults.headers.common["Accept"] = "application/json";
+axios.defaults.headers.post["Content-Type"] = "application/json";
+axios.defaults.headers.common[
+  "Authorization"
+] = `Token ${process.env.REACT_APP_API_TOKEN}`;
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  document.getElementById("root") as HTMLElement
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+root.render(
+  <ContextProvider>
+    <App />
+  </ContextProvider>
+);

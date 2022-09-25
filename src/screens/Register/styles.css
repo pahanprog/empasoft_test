@@ -1,0 +1,54 @@
+h1 {
+  font-size: 36px;
+  position: absolute;
+  top: -108px;
+}
+
+h2 {
+  font-size: 24px;
+  position: absolute;
+  top: -36px;
+}
+
+form {
+  width: 100%;
+}
+
+.flex_center_vertical.login {
+  width: 500px;
+  position: relative;
+}
+
+@media (max-width: 580px) {
+  h1 {
+    font-size: 30px;
+    top: -74px;
+  }
+
+  h2 {
+    font-size: 18px;
+    top: -20px;
+  }
+
+  .flex_center_vertical.login {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+    top: -64px;
+  }
+
+  h2 {
+    font-size: 16px;
+    top: -28px;
+  }
+
+  .flex_center_vertical.login {
+    width: 100%;
+    padding: 0 15px;
+  }
+}

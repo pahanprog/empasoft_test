@@ -1,0 +1,38 @@
+.user_list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 20px;
+  padding: 15px 30px;
+  overflow: auto;
+}
+
+.user_create {
+  border: 1px solid grey;
+  border-radius: 8px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .user_list {
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px;
+  }
+}
+
+@media (max-width: 580px) {
+  .user_list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    padding: 15px;
+  }
+}
