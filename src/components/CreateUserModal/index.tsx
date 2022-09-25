@@ -21,7 +21,13 @@ const CreateUserModal = ({ onCreateSuccess }: Props) => {
   // fromik initialization
   const formik = useFormik({
     validateOnMount: true,
-    initialValues: {} as UserAuthValues,
+    initialValues: {
+      username: "",
+      first_name: "",
+      last_name: "",
+      password: "",
+      password_confirm: "",
+    } as UserAuthValues,
     validationSchema: userSignUpSchema,
     onSubmit: async (values) => {
       const onSuccess = (user: UserListItem) => {
